@@ -2,9 +2,7 @@
 
 <template>
   <h1>Hey!</h1>
-  <p>
-    Feel free to get in touch via Email, Social Media or simply give me Call!
-  </p>
+  <p>Feel free to get in touch via Email or LinkedIn!</p>
   <p>I'd love to hear more about you or your Ideas!</p>
   <h1>Let's have a chat!</h1>
   <p>
@@ -31,14 +29,6 @@
         href="https://www.linkedin.com/in/stefan-kern-817791201"
         data-tooltip="LinkedIn"
         ><span class="sr">LinkedIn</span><i class="ri-linkedin-line"></i
-      ></a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-icon"
-        data-tooltip="+4915730787202"
-        href="tel:+4915730787202"
-        ><span class="sr">+4915730787202</span><i class="ri-phone-line"></i
       ></a>
     </div>
   </div>
@@ -67,8 +57,8 @@ el {
   padding-bottom: 0;
 }
 .social-icons {
-  min-width: 200px;
-  max-width: 250px;
+  min-width: 100px;
+  max-width: 150px;
   display: flex;
   padding-top: 1rem;
   justify-content: space-between;
