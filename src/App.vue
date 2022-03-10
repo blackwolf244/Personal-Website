@@ -305,12 +305,12 @@ section {
   }
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   .light {
     --bg: var(--color-black);
     --p: var(--pdark);
     --text: var(--color-white);
     --border: var(--color-white);
   }
-} */
+}
 </style>
