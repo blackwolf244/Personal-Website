@@ -3,6 +3,7 @@ import Landing from "./components/Landing.vue";
 import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
 import Nav from "./components/Nav.vue";
+import SFooter from "./components/SFooter.vue";
 import { createDOMCompilerError } from "@vue/compiler-dom";
 </script>
 
@@ -21,6 +22,7 @@ import { createDOMCompilerError } from "@vue/compiler-dom";
       <section id="contact">
         <Contact />
       </section>
+      <SFooter></SFooter>
     </div>
   </div>
 
@@ -40,6 +42,7 @@ import { createDOMCompilerError } from "@vue/compiler-dom";
   --p: var(--plight);
   --text: var(--color-black);
   --border: var(--color-black);
+  --borderwidth: 1px;
 }
 
 .dark {
@@ -47,6 +50,7 @@ import { createDOMCompilerError } from "@vue/compiler-dom";
   --p: var(--pdark);
   --text: var(--color-white);
   --border: var(--color-white);
+  --borderwidth: 2px;
 }
 
 /* .light {
@@ -83,7 +87,6 @@ p {
   -moz-osx-font-smoothing: grayscale;
 }
 section {
-  padding-top: 40px;
   height: 100vh;
   display: flex;
   flex-direction: column;

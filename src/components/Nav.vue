@@ -64,7 +64,7 @@
 .focus {
   float: right;
   margin: 25px;
-  margin-right: 30px;
+  margin-right: 2.5rem;
   display: flex;
 }
 
@@ -74,8 +74,8 @@
   padding: 10px;
   font-weight: bold;
   font-size: 1rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
