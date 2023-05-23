@@ -4,26 +4,53 @@ import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
 import Nav from "./components/Nav.vue";
 import SFooter from "./components/SFooter.vue";
-import { createDOMCompilerError } from "@vue/compiler-dom";
+import Effect from "./components/Effect.vue"
+import { onMounted } from "vue";
+
+onMounted(() => {
+  const themeSwitch = document.querySelector('.theme-switch');
+  themeSwitch.checked = localStorage.getItem('switchedTheme') === 'true';
+
+  themeSwitch.addEventListener('change', function (e) {
+    if (e.currentTarget.checked === true) {
+      // Add item to local storage
+      localStorage.setItem('switchedTheme', 'true');
+      console.log("added")
+    } else {
+      // Remove item if theme is switched back to normal
+      localStorage.removeItem('switchedTheme');
+      console.log("removed")
+    }
+  });
+})
+
 </script>
 
 <template>
   <div>
-    <Nav></Nav>
-    <div class="container">
-      <section id="landing">
-        <Landing />
-      </section>
+    <input type="checkbox" class="theme-switch" id="theme-switch">
+    <div id="page">
+      <Effect />
+      <Nav></Nav>
+      <div class="container">
 
-      <section id="projects">
-        <Projects />
-      </section>
 
-      <section id="contact">
-        <Contact />
-      </section>
-      <SFooter></SFooter>
+        <section id="landing">
+          <Landing />
+        </section>
+
+        <section id="projects">
+          <Projects />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+        <SFooter></SFooter>
+
+      </div>
     </div>
+
   </div>
 
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
@@ -35,27 +62,16 @@ import { createDOMCompilerError } from "@vue/compiler-dom";
   --plight: #562ef2;
   --color-white: #fff;
   --color-black: #000;
-}
 
-.light {
+  /* Light mode */
   --bg: var(--color-white);
   --p: var(--plight);
+  --q: var(--pdark);
   --text: var(--color-black);
   --border: var(--color-black);
   --borderwidth: 1px;
-}
 
-.dark {
-  --bg: var(--color-black);
-  --p: var(--pdark);
-  --text: var(--color-white);
-  --border: var(--color-white);
-  --borderwidth: 2px;
 }
-
-/* .light {
-  background-color: 
-} */
 
 * {
   margin: 0px;
@@ -64,6 +80,11 @@ import { createDOMCompilerError } from "@vue/compiler-dom";
 }
 
 body {
+
+  overflow: hidden;
+}
+
+#page {
   background-color: var(--bg);
 }
 
@@ -81,11 +102,32 @@ h2 {
 p {
   color: var(--text);
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
+
+/* Switched mode */
+.theme-switch:checked~#page {
+  --bg: var(--color-black);
+  --p: var(--pdark);
+  --q: var(--plight);
+  --text: var(--color-white);
+  --border: var(--color-white);
+  --borderwidth: 2px;
+}
+
+.theme-switch {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 section {
   height: 100vh;
   display: flex;
@@ -100,6 +142,7 @@ section {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 [data-tooltip] {
@@ -114,7 +157,8 @@ section {
   visibility: hidden;
   opacity: 0;
   left: 50%;
-  bottom: calc(100% + 5px); /* 5px is the size of the arrow */
+  bottom: calc(100% + 5px);
+  /* 5px is the size of the arrow */
   pointer-events: none;
   transition: 0.1s;
   will-change: transform;
@@ -145,12 +189,15 @@ section {
 [data-tooltip]:after {
   content: "";
   border-style: solid;
-  border-width: 5px 5px 0px 5px; /* CSS triangle */
+  border-width: 5px 5px 0px 5px;
+  /* CSS triangle */
   border-color: var(--border) transparent transparent transparent;
-  transition-duration: 0s; /* If the mouse leaves the element, 
+  transition-duration: 0s;
+  /* If the mouse leaves the element, 
                               the transition effects for the 
                               tooltip arrow are "turned off" */
-  transform-origin: top; /* Orientation setting for the
+  transform-origin: top;
+  /* Orientation setting for the
                               slide-down effect */
   transform: translateX(-50%) scaleY(0);
 }
@@ -161,19 +208,23 @@ section {
   visibility: visible;
   opacity: 1;
 }
+
 /* Scales from 0.5 to 1 -> grow effect */
 [data-tooltip]:hover:before {
   transition-delay: 0.2s;
   transform: translate(-50%, -5px) scale(1);
 }
+
 /* 
   Arrow slide down effect only on mouseenter (NOT on mouseleave)
 */
 [data-tooltip]:hover:after {
-  transition-delay: 0.2s; /* Starting after the grow effect */
+  transition-delay: 0.2s;
+  /* Starting after the grow effect */
   transition-duration: 0.2s;
   transform: translateX(-50%) scaleY(1);
 }
+
 /*
   That's it for the basic tooltip.
 
@@ -194,6 +245,7 @@ section {
 [data-tooltip-location="left"]:before {
   transform: translate(-5px, 50%) scale(0.5);
 }
+
 [data-tooltip-location="left"]:hover:before {
   transform: translate(-5px, 50%) scale(1);
 }
@@ -205,6 +257,7 @@ section {
   transform-origin: left;
   transform: translateY(50%) scaleX(0);
 }
+
 [data-tooltip-location="left"]:hover:after {
   transform: translateY(50%) scaleX(1);
 }
@@ -219,6 +272,7 @@ section {
 [data-tooltip-location="right"]:before {
   transform: translate(5px, 50%) scale(0.5);
 }
+
 [data-tooltip-location="right"]:hover:before {
   transform: translate(5px, 50%) scale(1);
 }
@@ -229,6 +283,7 @@ section {
   transform-origin: right;
   transform: translateY(50%) scaleX(0);
 }
+
 [data-tooltip-location="right"]:hover:after {
   transform: translateY(50%) scaleX(1);
 }
@@ -243,6 +298,7 @@ section {
 [data-tooltip-location="bottom"]:before {
   transform: translate(-50%, 5px) scale(0.5);
 }
+
 [data-tooltip-location="bottom"]:hover:before {
   transform: translate(-50%, 5px) scale(1);
 }
@@ -267,6 +323,7 @@ section {
 }
 
 @media only screen and (min-width: 768px) {
+
   /* For desktop: */
   section {
     height: 100vh;
@@ -279,15 +336,18 @@ section {
   h1 {
     font-size: 2.4rem;
   }
+
   h2 {
     font-size: 1.5rem;
   }
+
   p {
     max-width: 70%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+
   /* For desktop: */
   section {
     height: 100vh;
@@ -300,20 +360,23 @@ section {
   h1 {
     font-size: 2.4rem;
   }
+
   h2 {
     font-size: 1.5rem;
   }
+
   p {
     max-width: 65%;
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .light {
     --bg: var(--color-black);
     --p: var(--pdark);
+    --q: var(--plight);
     --text: var(--color-white);
     --border: var(--color-white);
   }
-}
+} */
 </style>

@@ -5,9 +5,8 @@
   <div class="topbar">
     <div class="focus">
       <a class="contact" href="#contact">Say Hi!</a>
-      <a @click="increment" class="switch" href="#"
-        ><span class="sr">Theme Switch</span><i class="ri-fire-line"></i
-      ></a>
+      <label for="theme-switch" class="switch"><span class="sr">Theme Switch</span><i
+          class="ri-moon-clear-line"></i></label>
     </div>
   </div>
   <div class="sidebar">
@@ -19,7 +18,12 @@
   </div>
 </template>
 
-<style scoped>
+<style>
+.theme-switch:checked .ri-moon-clear-line {
+  display: hidden;
+  color: red;
+}
+
 .topbar {
   position: fixed;
   display: block;
@@ -29,16 +33,18 @@
   width: 100vw;
   height: 120px;
 }
+
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   margin-top: 40px;
   margin-left: 1.4rem;
-  height: calc(100vh - 80px);
+  height: calc(100% - 80px);
   border-left: 1px solid;
   border-color: var(--border);
 }
+
 .sidebar h2 {
   padding-top: 5px;
   padding-left: 0.5rem;
@@ -84,12 +90,13 @@
   border-color: var(--border);
   border-radius: 5px;
 }
+
 .contact:hover {
   border: solid 3px;
 }
+
 .switch {
   display: flex;
-  display: none;
   align-items: center;
   justify-content: center;
   color: var(--text);
