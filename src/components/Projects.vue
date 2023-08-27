@@ -5,22 +5,12 @@
   <p>To keep on learning you have to keep on trying new stuff so I do!</p>
   <p>Check out some of my Projects on GitHub and Dribbble!</p>
   <div class="social-icons">
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      class="social-icon"
-      href="https://dribbble.com/StKern"
-      data-tooltip="Dribble"
-      ><span class="sr">Dribble</span><i class="ri-dribbble-line"></i
-    ></a>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      class="social-icon"
-      data-tooltip="Github"
-      href="https://github.com/blackwolf244"
-      ><span class="sr">GitHub</span><i class="ri-github-line"></i
-    ></a>
+    <a target="_blank" rel="noopener noreferrer" class="social-icon" href="https://dribbble.com/StKern"
+      data-tooltip="Dribbble"><span class="sr">Dribbble</span><i class="ri-dribbble-line"></i></a>
+    <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="GitHub"
+      href="https://github.com/blackwolf244"><span class="sr">GitHub</span><i class="ri-github-line"></i></a>
+    <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="CodePen"
+      href="https://codepen.io/blackwolf244"><span class="sr">CodePen</span><i class="ri-codepen-line"></i></a>
   </div>
   <h2>Check out my Blog:</h2>
   <div class="cnt">
@@ -72,6 +62,7 @@ p {
 }
 
 @keyframes shake {
+
   10%,
   90% {
     transform: translate3d(-1px, 0, 0);
@@ -108,13 +99,14 @@ p {
 }
 
 .social-icons {
-  min-width: 100px;
-  max-width: 150px;
+  min-width: 160px;
+  max-width: 200px;
   display: flex;
   padding-top: 1rem;
   padding-bottom: 2rem;
   justify-content: space-between;
 }
+
 .social-icon {
   display: flex;
   align-items: center;

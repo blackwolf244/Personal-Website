@@ -75,17 +75,17 @@
 }
 
 .contact {
+  padding: 8px;
   text-decoration: none;
-  line-height: 23px;
-  padding: 10px;
+  line-height: 1rem;
   font-weight: bold;
   font-size: 1rem;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
   color: var(--text);
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
   border: 2px solid;
   border-color: var(--border);
   border-radius: 5px;
@@ -102,12 +102,12 @@
   color: var(--text);
   border: solid 2px;
   border-color: var(--border);
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   cursor: pointer;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-decoration: none;
   margin-left: 1.5rem;
   margin-right: 1rem;

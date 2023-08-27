@@ -5,30 +5,15 @@
     <div class="p1">
       <h1>
         I'm an
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://techterms.com/definition/internet_of_things"
-          data-tooltip="https://techterms.com/definition/internet_of_things"
-          >IOT</a
-        >
+        <a target="_blank" rel="noopener noreferrer" href="https://techterms.com/definition/internet_of_things"
+          data-tooltip="https://techterms.com/definition/internet_of_things">IOT</a>
         and
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://dev.to/emmabostian/ux-engineering-3hem"
-          data-tooltip="https://dev.to/emmabostian/ux-engineering-3hem"
-          >UX-Engineering</a
-        >
+        <a target="_blank" rel="noopener noreferrer" href="https://dev.to/emmabostian/ux-engineering-3hem"
+          data-tooltip="https://dev.to/emmabostian/ux-engineering-3hem">UX-Engineering</a>
         <br />
         Student at the
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.th-deg.de/en"
-          data-tooltip="https://www.th-deg.de/en"
-          >DIT</a
-        >
+        <a target="_blank" rel="noopener noreferrer" href="https://www.th-deg.de/en"
+          data-tooltip="https://www.th-deg.de/en">DIT</a>
         interested <br />in all things web!
       </h1>
       <p>
@@ -41,7 +26,7 @@
         say hi, feel free to <a href="#contact">contact</a> me!
       </p>
     </div>
-    <div class="illustration">
+    <!-- <div class="illustration">
       <svg
         aria-hidden="true"
         focusable="false"
@@ -128,7 +113,7 @@
           />
         </g>
       </svg>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -137,9 +122,11 @@
   width: 100%;
   display: inline-block;
 }
+
 .p1 {
   float: left;
 }
+
 .illustration {
   float: left;
   display: none;
@@ -176,6 +163,7 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
+
   /* For desktop: */
   .p1 {
     width: 100%;
@@ -188,9 +176,11 @@ a {
   .p1 {
     width: 60%;
   }
+
   h1 {
     padding-bottom: 6rem;
   }
+
   p {
     padding-bottom: 4rem;
   }

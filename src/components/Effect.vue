@@ -27,7 +27,6 @@ export default {
 
 <style scoped>
 #blob {
-  background-color: white;
   height: 34vmax;
   aspect-ratio: 1;
   position: absolute;
@@ -37,7 +36,7 @@ export default {
   border-radius: 50%;
   background: linear-gradient(to right, var(--q), var(--p));
   animation: spin 10s linear infinite;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 @keyframes spin {
@@ -50,7 +49,7 @@ export default {
 .blur {
   pointer-events: none;
   z-index: 2;
-  filter: blur(5vmax) brightness(60%) opacity(70%);
+  filter: blur(5vmax) brightness(80%) opacity(50%);
 }
 
 @media (prefers-reduced-motion) {
