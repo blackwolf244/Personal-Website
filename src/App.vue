@@ -15,11 +15,9 @@ onMounted(() => {
     if (e.currentTarget.checked === true) {
       // Add item to local storage
       localStorage.setItem('switchedTheme', 'true');
-      console.log("added")
     } else {
       // Remove item if theme is switched back to normal
       localStorage.removeItem('switchedTheme');
-      console.log("removed")
     }
   });
 })
