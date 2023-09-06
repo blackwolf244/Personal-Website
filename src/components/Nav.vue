@@ -41,15 +41,15 @@
   margin-top: 40px;
   margin-left: 1.4rem;
   height: calc(100% - 80px);
-  border-left: 1px solid;
-  border-color: var(--border);
+  border-left: solid var(--border) 1px;
 }
 
 .sidebar h2 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1rem;
   padding-top: 5px;
   padding-left: 0.5rem;
-  font-weight: normal;
-  font-size: 1.2rem;
   text-transform: uppercase;
   text-orientation: mixed;
   writing-mode: vertical-rl;
@@ -62,7 +62,7 @@
 .line i {
   position: absolute;
   bottom: 0;
-  font-size: 2rem;
+  font-size: 1rem;
   padding-left: 0.2rem;
   color: var(--text);
 }
@@ -86,13 +86,14 @@
   color: var(--text);
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-  border: 2px solid;
+  border: solid;
   border-color: var(--border);
   border-radius: 5px;
+  border-width: var(--borderwidth);
 }
 
 .contact:hover {
-  border: solid 3px;
+  border: solid calc(var(--borderwidth) + 1px);
 }
 
 .switch {
@@ -100,7 +101,7 @@
   align-items: center;
   justify-content: center;
   color: var(--text);
-  border: solid 2px;
+  border: var(--borderwidth) solid;
   border-color: var(--border);
   width: 35px;
   height: 35px;
@@ -114,8 +115,8 @@
 }
 
 .switch:hover {
-  border: 3px solid;
   color: var(--p);
   border-color: var(--p);
+  border: solid calc(var(--borderwidth) + 1px);
 }
 </style>

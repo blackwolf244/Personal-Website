@@ -2,6 +2,7 @@
 import Landing from "./components/Landing.vue";
 import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
+import Assets from "./components/Assets.vue"
 import Nav from "./components/Nav.vue";
 import SFooter from "./components/SFooter.vue";
 import Effect from "./components/Effect.vue"
@@ -32,7 +33,6 @@ onMounted(() => {
       <Nav></Nav>
       <div class="container">
 
-
         <section id="landing">
           <Landing />
         </section>
@@ -41,6 +41,10 @@ onMounted(() => {
           <Projects />
         </section>
 
+        <!-- <section id="assets">
+          <Assets />
+        </section> -->
+
         <section id="contact">
           <Contact />
         </section>
@@ -48,27 +52,22 @@ onMounted(() => {
 
       </div>
     </div>
-
   </div>
-
-  <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
 </template>
 
 <style>
 :root {
-  --pdark: #ff5303;
+  --pdark: #F55218;
   --plight: #562ef2;
-  --color-white: #fff;
+  --color-white: #e8ebf7;
   --color-black: #000;
-
   /* Light mode */
   --bg: var(--color-white);
   --p: var(--plight);
   --q: var(--pdark);
   --text: var(--color-black);
   --border: var(--color-black);
-  --borderwidth: 1px;
-
+  --borderwidth: 2px;
 }
 
 * {
@@ -78,7 +77,6 @@ onMounted(() => {
 }
 
 body {
-
   overflow: hidden;
 }
 
@@ -115,7 +113,7 @@ p {
   --q: var(--plight);
   --text: var(--color-white);
   --border: var(--color-white);
-  --borderwidth: 2px;
+  --borderwidth: 1px;
 }
 
 .theme-switch {
@@ -131,7 +129,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 3rem;
+  padding-right: 1rem;
   padding-left: 2.3rem;
   scroll-snap-align: start;
 }
@@ -325,7 +323,7 @@ section {
   /* For desktop: */
   section {
     height: 100vh;
-    padding-right: 3rem;
+    padding-right: 2rem;
     padding-left: 10rem;
     padding-top: 50px;
     scroll-snap-align: start;
@@ -356,7 +354,7 @@ section {
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
   }
 
   h2 {
@@ -364,17 +362,7 @@ section {
   }
 
   p {
-    max-width: 65%;
+    max-width: 70%;
   }
 }
-
-/* @media (prefers-color-scheme: dark) {
-  .light {
-    --bg: var(--color-black);
-    --p: var(--pdark);
-    --q: var(--plight);
-    --text: var(--color-white);
-    --border: var(--color-white);
-  }
-} */
 </style>

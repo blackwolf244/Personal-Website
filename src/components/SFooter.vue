@@ -4,20 +4,15 @@
 <template>
   <footer>
     <div class="remix">
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-icon"
-        data-tooltip="Icons by Remix Icons"
-        href="https://remixicon.com/"
-      >
+      <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="Icons by Remix Icons"
+        href="https://remixicon.com/">
         <div class="socialicon">
           <span class="sr">Remix Icons</span><i class="ri-remixicon-line"></i>
         </div>
         <div class="rlabel">
           <p>Remix Icons</p>
-        </div></a
-      >
+        </div>
+      </a>
     </div>
   </footer>
 </template>
@@ -32,8 +27,9 @@ footer {
   padding-right: 2.5rem;
   padding-left: 4rem;
 }
+
 .remix {
-  height: 75px;
+  height: 1rem;
   width: fit-content;
   display: flex;
   float: right;
@@ -43,11 +39,13 @@ footer {
 .remix a {
   width: fit-content;
 }
+
 .rlabel {
   display: flex;
   float: left;
   align-items: center;
 }
+
 .rlabel p {
   text-transform: uppercase;
   max-width: 100%;
@@ -72,6 +70,7 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+
   /* For desktop: */
   footer {
     padding-left: 10rem;
@@ -79,6 +78,7 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) {
+
   /* For desktop: */
   footer {
     padding-left: 15rem;

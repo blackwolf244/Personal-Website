@@ -4,26 +4,19 @@
   <div class="wrapper">
     <div class="p1">
       <h1>
-        I'm an
         <a target="_blank" rel="noopener noreferrer" href="https://techterms.com/definition/internet_of_things"
-          data-tooltip="https://techterms.com/definition/internet_of_things">IOT</a>
-        and
-        <a target="_blank" rel="noopener noreferrer" href="https://dev.to/emmabostian/ux-engineering-3hem"
-          data-tooltip="https://dev.to/emmabostian/ux-engineering-3hem">UX-Engineering</a>
-        <br />
-        Student at the
-        <a target="_blank" rel="noopener noreferrer" href="https://www.th-deg.de/en"
-          data-tooltip="https://www.th-deg.de/en">DIT</a>
-        interested <br />in all things web!
+          data-tooltip="techterms.com" data-tooltip-location="right">IOT</a> and <a target="_blank"
+          rel="noopener noreferrer" href="https://dev.to/emmabostian/ux-engineering-3hem"
+          data-tooltip="dev.to">UX-Engineering</a> Enthusiast with
+        Passion
       </h1>
-      <p>
-        From IoT, Web Technologies and Design over to User Experience and
-        Content generation. The Web allows for so many posibilities and I simply
-        wanna try them all!
+      <p> <i>I am an Interactive Systems Engineer striving to improve and develop my skills as a Developer, Product
+          Designer and UX
+          Researcher.</i>
       </p>
       <p class="el">
-        If you are interested in my <a href="#projects">work</a> or simply wanna
-        say hi, feel free to <a href="#contact">contact</a> me!
+        My current interests are accessible development, modular system design and generative art, so you'll see some
+        <a href="#projects">projects</a> about those topics soon.
       </p>
     </div>
     <!-- <div class="illustration">
@@ -147,10 +140,11 @@ h1 {
   letter-spacing: 2px;
 }
 
+
 p {
   letter-spacing: 1.5px;
   line-height: 24px;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .el {
@@ -165,19 +159,21 @@ a {
 @media only screen and (min-width: 768px) {
 
   /* For desktop: */
-  .p1 {
+  /* .p1 {
     width: 100%;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1200px) {
   /* For desktop: */
 
-  .p1 {
+  /* .p1 {
     width: 60%;
-  }
+  } */
 
   h1 {
+    font-size: 3.5rem;
+    max-width: 90%;
     padding-bottom: 6rem;
   }
 

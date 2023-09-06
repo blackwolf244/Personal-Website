@@ -1,11 +1,9 @@
-<script></script>
-
 <template>
-  <h1>Projects I'm working on</h1>
-  <p>I dabbled in multiple areas but seems like I mostly fell in love with web development.
+  <h1>Public Assets</h1>
+  <p>Templates, Designs and Documents based upon my own research,
   </p>
-  <p>Feel free to check my GitHub, Codepen and Projects!</p>
-  <div class="social-container">
+  <p>for everyone and free to use.</p>
+  <div>
     <div class="social-icons">
       <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="GitHub"
         href="https://github.com/blackwolf244"><span class="sr">GitHub</span><i class="ri-github-line"></i></a>
@@ -15,10 +13,13 @@
     <div class="social-icons">
       <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="WebXRLibrary"
         href="https://webxr-library.web.app/"><span class="sr">WebXR Library</span><i class="ri-stack-fill"></i></a>
+      <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="Pebblebox"
+        href="https://github.com/blackwolf244/Ionic-Pebblebox"><span class="sr">PebbleBox</span><i
+          class="ri-code-s-slash-line"></i></a>
     </div>
 
   </div>
-  <h2>Check out my Blog:</h2>
+  <h2>Tools:</h2>
   <div class="cnt">
     <div class="blog">
       <p>Still in Development</p>
@@ -111,11 +112,7 @@ p {
   padding-top: 1rem;
   padding-bottom: 2rem;
   justify-content: space-between;
-  margin-right: 0.5rem;
-}
-
-.social-icons~.social-icons {
-  margin-right: 0;
+  margin-right: 3rem;
 }
 
 .social-icon {
@@ -130,42 +127,16 @@ p {
   border-radius: 50%;
   cursor: pointer;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-decoration: none;
-  margin-right: clamp(5px, 5vw, 2.5rem);
+  margin-right: clamp(10px, 5vw, 2.5rem);
 }
 
 .social-icon:hover {
   border: solid 2px;
 }
 
-@media only screen and (min-width: 768px) {
-
+@media only screen and (min-width: 1200px) {
   /* For desktop: */
-  .social-icons {
-    float: left;
-    display: flex;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    justify-content: space-between;
-    margin-right: 3rem;
-  }
-
-  .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text);
-    border: solid 1px;
-    border-color: var(--border);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 2rem;
-    text-decoration: none;
-    margin-right: clamp(10px, 5vw, 2.5rem);
-  }
 }
 </style>
