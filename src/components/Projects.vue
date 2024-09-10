@@ -4,26 +4,40 @@
   <h1>Projects I'm working on</h1>
   <p>I dabbled in multiple areas but seems like I mostly fell in love with web development.
   </p>
-  <p>Feel free to check my GitHub, Codepen and Projects!</p>
-  <div class="social-container">
+  <p>Feel free to check my GitHub, CodePen and Projects i'm involved in!</p>
+
+
+  <div class="spacing cnt wrapped">
+    <div data-tooltip="In progress">
+      <span class="project inprogress linkEffect">
+        Blog<i class="ri-hammer-line"></i>
+      </span>
+    </div>
+    <div data-tooltip="In progress">
+      <span class="project inprogress linkEffect">
+        Obsidian-TF-IDF-Tagger<i class="ri-hammer-line"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="cnt spacing">
+    <span class="project linkEffect"><a href="https://webxr-library.web.app/">WebXR Library</a></span>
+    <span class="project linkEffect"><a href="https://github.com/blackwolf244/tabliss-dark-glass">Tabliss Dark
+        Glass</a></span>
+    <span class="project linkEffect"><a href="https://enerplanet.th-deg.de/">EnerPlanET-Web-App</a></span>
+  </div>
+
+  <div class="spacing social-container">
     <div class="social-icons">
       <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="GitHub"
         href="https://github.com/blackwolf244"><span class="sr">GitHub</span><i class="ri-github-line"></i></a>
       <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="CodePen"
         href="https://codepen.io/blackwolf244"><span class="sr">CodePen</span><i class="ri-codepen-line"></i></a>
     </div>
-    <div class="social-icons">
+    <!-- <div class="social-icons">
       <a target="_blank" rel="noopener noreferrer" class="social-icon" data-tooltip="WebXRLibrary"
         href="https://webxr-library.web.app/"><span class="sr">WebXR Library</span><i class="ri-stack-fill"></i></a>
-    </div>
-
-  </div>
-  <h2>Check out my Blog:</h2>
-  <div class="cnt">
-    <div class="blog">
-      <p>Still in Development</p>
-      <i class="ri-hammer-line"></i>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -34,34 +48,49 @@ h1 {
   letter-spacing: 2px;
 }
 
+.linkEffect,
+.linkEffect * {
+  font-weight: 400;
+}
+
+
+
 h2 {
   padding-bottom: 1.5rem;
 }
 
 p {
-  font-size: 1rem;
   letter-spacing: 1.5px;
   line-height: 24px;
   padding-bottom: 1rem;
 }
 
-.blog {
-  text-decoration: none;
-  padding: 10px;
-  width: 200px;
-  height: 70px;
-  max-width: 600px;
+.cnt {
+  width: 80%;
   display: flex;
-  align-items: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--text);
-  border: 1px dashed;
-  border-color: var(--border);
-  border-radius: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.blog:hover {
+.wrapped {
+  display: flex;
+  width: fit-content;
+}
+
+.spacing {
+  margin-top: 10px;
+}
+
+.project {
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  padding: 4px;
+  text-decoration: none;
+  display: flex;
+  letter-spacing: 2px;
+}
+
+.inprogress:hover {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -92,17 +121,8 @@ p {
   }
 }
 
-.blog p {
-  padding-bottom: 0;
-  line-height: 28px;
-}
-
-.blog i {
-  position: relative;
-  font-size: 1.5rem;
-  padding-left: 25px;
+.inprogress i {
   transform: rotate(20deg);
-  bottom: 5px;
 }
 
 .social-icons {

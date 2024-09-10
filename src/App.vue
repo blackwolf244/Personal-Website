@@ -59,7 +59,7 @@ onMounted(() => {
 :root {
   --pdark: #F55218;
   --plight: #562ef2;
-  --color-white: #e8ebf7;
+  --color-white: #ffffff;
   --color-black: #000;
   /* Light mode */
   --bg: var(--color-white);
@@ -78,6 +78,7 @@ onMounted(() => {
 
 body {
   overflow: hidden;
+  font-size: 1.2rem;
 }
 
 #page {
@@ -96,7 +97,41 @@ h2 {
 }
 
 p {
+  font-size: 1.2rem;
   color: var(--text);
+}
+
+.linkEffect {
+  text-decoration: none;
+  background-color: var(--text);
+  color: var(--bg);
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.linkEffect * {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold
+}
+
+.linkEffect::after {
+  content: "";
+  mix-blend-mode: exclusion;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 0%;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.linkEffect:hover::after {
+  height: 100%
 }
 
 #app {
@@ -354,7 +389,9 @@ section {
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    max-width: 90%;
+    padding-bottom: 6rem;
   }
 
   h2 {

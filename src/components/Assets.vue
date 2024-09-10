@@ -40,7 +40,6 @@ h2 {
 }
 
 p {
-  font-size: 1rem;
   letter-spacing: 1.5px;
   line-height: 24px;
   padding-bottom: 1rem;

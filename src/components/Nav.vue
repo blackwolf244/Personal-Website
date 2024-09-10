@@ -11,7 +11,7 @@
   </div>
   <div class="sidebar">
     <div class="line">
-      <h2>Kern <br />Stefan</h2>
+      <h2><span>Kern</span> <br />Stefan</h2>
 
       <i class="ri-arrow-down-s-line"></i>
     </div>
@@ -47,12 +47,18 @@
 .sidebar h2 {
   text-decoration: none;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding-top: 5px;
   padding-left: 0.5rem;
   text-transform: uppercase;
   text-orientation: mixed;
   writing-mode: vertical-rl;
+}
+
+.sidebar h2 span {
+  background-color: var(--text);
+  color: var(--bg);
+  padding: 4px 0px;
 }
 
 .line {
@@ -62,7 +68,6 @@
 .line i {
   position: absolute;
   bottom: 0;
-  font-size: 1rem;
   padding-left: 0.2rem;
   color: var(--text);
 }
@@ -79,7 +84,6 @@
   text-decoration: none;
   line-height: 1rem;
   font-weight: bold;
-  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
